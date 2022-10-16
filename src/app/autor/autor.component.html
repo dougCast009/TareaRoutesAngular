@@ -1,1 +1,16 @@
-<h1>Autor</h1>
+<div class="container d-flex justify-content-center mt-2 mb-5">
+    <div class="card" style="width: 25rem;">
+        <div *ngIf="mostrar">
+            <img src="assets/img/autor.jpg" class="card-img-top">
+        </div>
+        <div class="card-body">
+            <button type="button" class="btn btn-success w-100" (click)="accionImagen()">Mostrar/Ocultar Imagen</button>
+            <h5>Programador: {{programador}}</h5>
+            <p class="card-text">Ing. Sistemas, programador y ciclista.</p>
+            <h5>Lenguajes:</h5>
+            <ul *ngFor="let lenguaje of lenguajes" class="list-group list-group-flush">
+                <li class="list-group-item list-group-item-action">{{lenguaje}}</li>
+            </ul>
+        </div>
+      </div>
+</div>
